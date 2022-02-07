@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import aiohttp
+# import aiohttp
 import asyncio
 import threading
 import time
@@ -20,7 +20,7 @@ import requests
 nodes = int(sys.argv[1])
 count = int(sys.argv[2])
 
-with open('./IDs.csv', mode='w') as csv_file:
+with open('../../logs/IDs.csv', mode='w') as csv_file:
    writer = csv.writer(csv_file)
 
    for i in range(count):

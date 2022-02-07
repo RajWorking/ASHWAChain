@@ -8,12 +8,18 @@ A Proof-of-Concept implementation of ASHWAchain protocol.
 - Python 3.6.9
 
 # How to run
-- Open a terminal, navigate to the root directory and run the go server
+- Open a terminal, navigate to the src directory. 
+  
+- In server directory, create a `.env` file and specify the PORT as
+    ```
+    PORT=8080
+    ```
+  Now, run the go server
     ```bash 
     go run main.go
     ```
 
-- Provide executable persmissions to all `.py` and `.sh` files
+- In nodes directory, provide executable persmissions to all python and bash script files
     ```
     chmod +x *.py *.sh
     ```

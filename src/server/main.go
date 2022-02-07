@@ -21,7 +21,7 @@ import (
 
 const powDifficulty = 1
 const committeeSize = 5
-const txBlockSize = 10
+const txBlockSize = 3
 
 // powBlock represents each 'item' in the powChain.
 // The PowID is the one controlled by the node proposing the block
@@ -138,7 +138,7 @@ func handleTransactions(w http.ResponseWriter, r *http.Request) {
 	pendingTxs = append(pendingTxs, txData)
 
 	// This happens in PBFT: Create a block of transactions and sign by the current committee
-	if len(pendingTxs) > txBlockSize {
+	if len(pendingTxs) >= txBlockSize {
 		txBlock := generateTxBlock()
 		txChain = append(txChain, txBlock)
 	}

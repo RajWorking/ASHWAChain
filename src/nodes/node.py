@@ -9,7 +9,7 @@ import logging
 
 ID = int(sys.argv[1])
 
-logfile = "./logs/" + str(ID) + ".log"
+logfile = "../../logs/" + str(ID) + ".log"
 logging.basicConfig(filename = logfile, 
 					format = '%(asctime)s %(message)s', 
 					filemode = 'w')
@@ -25,7 +25,7 @@ url = 'http://localhost:8080/'
 miningTimeVariance = 2
 avgMiningTime = 6
 
-with open('./IDs.csv', 'r') as f:
+with open('../../logs/IDs.csv', 'r') as f:
     csv_reader = csv.reader(f, delimiter=',')
     for row in csv_reader:
         if int(row[0]) == ID:
