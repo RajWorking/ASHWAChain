@@ -10,7 +10,7 @@ Below is the UML diagram and documentation of this Proof-of-Concept implementati
 
 Run the server by the following command
 ```bash
-go run main.go
+go run node.go
 ```
 
 PoW, Committee, and Transaction blockchains are stored in lists namely `powChain`, `comChain`, and `txChain`, respectively.
